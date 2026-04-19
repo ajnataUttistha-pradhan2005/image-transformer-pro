@@ -1,4 +1,4 @@
-# Image Transformer Pro (Luminous Lens)
+# Image Transformer Pro 
 
 ![Hero Image](./frontend/src/assets/readme-hero.png)
 
