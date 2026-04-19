@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-deep-space text-text-primary font-sans;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Utilities */
+  .glass-panel {
+    @apply bg-surface-1/70 backdrop-blur-md border border-surface-2;
+  }
+  
+  .glass-card {
+    @apply bg-surface-2/80 backdrop-blur-lg border border-vivid-violet/20 rounded-xl;
+  }
+
+  /* Custom Range Slider */
+  input[type=range] {
+    -webkit-appearance: none; 
+    @apply w-full bg-transparent h-1.5 rounded-full cursor-pointer;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    @apply w-full h-1.5 rounded-full bg-surface-2;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply h-4 w-4 rounded-full bg-electric-cyan shadow-neon transform -translate-y-1.5 transition-transform;
+  }
+
+  input[type=range]:active::-webkit-slider-thumb {
+    @apply scale-125 shadow-neon-hover;
+  }
+}
